@@ -242,6 +242,10 @@ export const DATA = {
             win: "1st Place Winner",
             description:
                 "Developed Eliot - a smart prepaid electric meter based on the Internet of Things (IoT). The device helped optimize power consumption by monitoring real-time usage, leading to significant energy savings. This project was recognized as a game-changer for the energy sector.",
+
+            image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
+            mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+            links: [],
         },
         {
             title: "IBM Hackathon",
@@ -249,6 +253,10 @@ export const DATA = {
             location: "Bengaluru, India",
             description:
                 "Built an AI-powered tool using IBM Watson that leveraged image detection to recognize circuit board defects in real-time. This innovation helped reduce manufacturing errors and improve hardware quality control in production lines.",
+
+            image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
+            mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+            links: [],
         },
         {
             title: "L&T Technology Services Hackathon",
@@ -256,6 +264,9 @@ export const DATA = {
             location: "Mysuru, India",
             description:
                 "Created a smart dashboard alert system for detecting and reporting server room activities. The system enhanced security by providing instant notifications of unauthorized access or unusual environmental conditions.",
+            image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
+            mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+            links: [],
         },
         {
             title: "L&T Technology Services Hackathon",
@@ -263,6 +274,9 @@ export const DATA = {
             location: "Mysuru, India",
             description:
                 "Developed a COVID-19 employee tracking system to monitor and trace affected employees within L&T offices. The tool provided insights to management, ensuring safer work environments and effective containment strategies.",
+            image: "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
+            mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+            links: [],
         },
     ],
 } as const;

@@ -12,6 +12,82 @@ export const DATA = {
     summary:
         "CTO with 8 years of experience leading web development and driving tech innovation. At FPS Lounge, led a cross-functional team, boosting user engagement by 40% in just six months. Expert in Next.js, Node.js, TypeScript, Firebase and cloud platforms like Google Cloud Platform. Passionate about building scalable solutions, mentoring teams, and staying ahead of tech trends.",
     avatarUrl: "/me.jpeg",
+
+    // Professional Stats
+    stats: {
+        yearsOfExperience: 8,
+        projectsCompleted: 50,
+        clientsSatisfied: 25,
+        teamMembersLed: 15,
+    },
+
+    // Achievements & Certifications
+    achievements: [
+        {
+            title: "Smart India Hackathon Winner",
+            year: "2018",
+            description: "1st Place Winner for IoT-based smart electric meter solution",
+            icon: "🏆",
+        },
+        {
+            title: "40% User Engagement Boost",
+            year: "2024",
+            description: "Led FPS Lounge platform optimization resulting in significant growth",
+            icon: "📈",
+        },
+        {
+            title: "Cross-functional Team Leadership",
+            year: "2023-2025",
+            description: "Successfully managed and mentored 15+ developers and designers",
+            icon: "👥",
+        },
+    ],
+
+    // Testimonials
+    testimonials: [
+        {
+            name: "Derek Taing",
+            role: "CEO at FPS Lounge",
+            content:
+                "Prabhjot's technical expertise and leadership skills are exceptional. He delivered our project ahead of schedule with outstanding quality.",
+            avatar: "/testimonial-1.jpg",
+        },
+        {
+            name: "Paul Chris Luke",
+            role: "Founder at PCL Labs",
+            content:
+                "Working with Prabhjot was a game-changer. His strategic thinking and technical implementation transformed our platform.",
+            avatar: "/testimonial-2.jpg",
+        },
+    ],
+
+    // Services offered
+    services: [
+        {
+            title: "Full-Stack Development",
+            description: "End-to-end web application development using modern technologies",
+            icon: "💻",
+            technologies: ["React", "Next.js", "Node.js", "TypeScript"],
+        },
+        {
+            title: "Cloud Architecture",
+            description: "Scalable cloud solutions and infrastructure design",
+            icon: "☁️",
+            technologies: ["GCP", "Firebase", "Docker", "Kubernetes"],
+        },
+        {
+            title: "Team Leadership",
+            description: "Technical team management and strategic planning",
+            icon: "🎯",
+            technologies: ["Agile", "Scrum", "Mentoring", "Strategic Planning"],
+        },
+        {
+            title: "Performance Optimization",
+            description: "Application performance tuning and scalability improvements",
+            icon: "⚡",
+            technologies: ["Performance Audits", "SEO", "Core Web Vitals", "Optimization"],
+        },
+    ],
     skills: [
         "Next.js",
         "React.js",

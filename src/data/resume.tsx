@@ -73,7 +73,7 @@ export const DATA = {
             title: "Chief Technology Officer",
             logoUrl: "/fpslounge.png",
             start: "March 2023",
-            end: "February 2025",
+            end: "July 2025",
             description:
                 "Started as Senior Lead Engineer and was promoted to CTO. Single-handedly built the entire platform from scratch—initially on WordPress, then migrated to React, and later Next.js for performance and scalability. Developed the backend using Firebase & Google Cloud Platform (GCP), ensuring a robust and scalable infrastructure. Created a thriving platform where thousands of gamers book coaching sessions and earn money. Played a key role in talking to angel investors, helping secure funding and drive growth.",
         },
@@ -116,7 +116,7 @@ export const DATA = {
         {
             title: "FPS Lounge Platform",
             href: "https://fpslounge.com",
-            dates: "March 2023 - February 2025",
+            dates: "March 2023 - July 2025",
             active: true,
             description:
                 "Single-handedly built the entire platform from scratch—initially on WordPress, then migrated to React, and later Next.js for performance and scalability. Created a thriving platform where thousands of gamers book coaching sessions and earn money. Launched a highly successful course program, starting with HisWattson (a top Twitch celebrity), which led to massive sales. Expanded the platform by bringing in multiple pro gamers to offer courses in various games.",

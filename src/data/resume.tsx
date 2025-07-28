@@ -8,9 +8,9 @@ export const DATA = {
     location: "MP, India",
     locationLink: "https://www.google.com/maps/place/madhyapradesh",
     description:
-        "Chief Technology Officer with 8 years of experience leading web development and driving tech innovation.",
+        "Chief Technology Officer & SAAS Expert with 8 years of experience in full-stack development, payment integrations, and digital innovation.",
     summary:
-        "CTO with 8 years of experience leading web development and driving tech innovation. At FPS Lounge, led a cross-functional team, boosting user engagement by 40% in just six months. Expert in Next.js, Node.js, TypeScript, Firebase and cloud platforms like Google Cloud Platform. Passionate about building scalable solutions, mentoring teams, and staying ahead of tech trends.",
+        "CTO & SAAS Expert with 8 years of experience in full-stack development, payment integrations, and digital innovation. At FPS Lounge, led a cross-functional team, boosting user engagement by 40% in just six months. Expert in Next.js, Node.js, TypeScript, Firebase, Unity game development, and digital art creation. Specialized in remote work with a professional home office setup, delivering high-quality solutions for clients worldwide.",
     avatarUrl: "/me.jpeg",
 
     // Professional Stats
@@ -61,6 +61,36 @@ export const DATA = {
         },
     ],
 
+    // Remote Work Setup
+    workSetup: {
+        workStyle: "100% Remote",
+        description: "Professional home office with cutting-edge equipment for maximum productivity",
+        equipment: [
+            {
+                category: "Computing",
+                items: [
+                    { name: "MacBook Pro M4 Max", description: "Latest Apple Silicon for peak performance" },
+                    { name: "32GB Unified Memory", description: "Seamless multitasking and development" }
+                ]
+            },
+            {
+                category: "Displays",
+                items: [
+                    { name: "2x Apple Studio Display 32\"", description: "Dual 5K Retina displays for enhanced productivity" },
+                    { name: "iPad Pro with Apple Pencil", description: "Digital art creation and design work" }
+                ]
+            },
+            {
+                category: "Peripherals",
+                items: [
+                    { name: "Keychron K2 Mechanical Keyboard", description: "Premium typing experience" },
+                    { name: "Professional Lighting Setup", description: "Optimal lighting for video calls" },
+                    { name: "Ergonomic Workspace", description: "Comfortable and productive environment" }
+                ]
+            }
+        ]
+    },
+
     // Services offered
     services: [
         {
@@ -68,6 +98,30 @@ export const DATA = {
             description: "End-to-end web application development using modern technologies",
             icon: "💻",
             technologies: ["React", "Next.js", "Node.js", "TypeScript"],
+        },
+        {
+            title: "SAAS Development",
+            description: "Complete SAAS platform development with subscription management",
+            icon: "🚀",
+            technologies: ["SAAS Architecture", "Multi-tenancy", "Subscription Models", "Analytics"],
+        },
+        {
+            title: "Payment Integration",
+            description: "Secure payment processing and e-commerce solutions",
+            icon: "💳",
+            technologies: ["Stripe", "PayPal", "Payment Gateways", "E-commerce"],
+        },
+        {
+            title: "Game Development",
+            description: "Interactive game development and immersive experiences",
+            icon: "🎮",
+            technologies: ["Unity", "C#", "Game Design", "Mobile Games"],
+        },
+        {
+            title: "Digital Art & Design",
+            description: "Creative digital artwork and UI/UX design using professional tools",
+            icon: "🎨",
+            technologies: ["Procreate", "Digital Illustration", "UI/UX Design", "Creative Direction"],
         },
         {
             title: "Cloud Architecture",
@@ -94,6 +148,13 @@ export const DATA = {
         "JavaScript",
         "TypeScript",
         "Node.js",
+        "SAAS Development",
+        "Stripe Integration",
+        "PayPal Integration",
+        "Unity Game Engine",
+        "C# Programming",
+        "Digital Art (Procreate)",
+        "UI/UX Design",
         "Deno",
         "Docker",
         "Github",
@@ -104,6 +165,7 @@ export const DATA = {
         "Firebase",
         "Strategic Planning",
         "Mentoring Teams",
+        "Remote Work Expert",
     ],
     navbar: [
         { href: "/", icon: HomeIcon, label: "Home" },

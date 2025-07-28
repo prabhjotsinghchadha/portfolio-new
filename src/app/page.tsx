@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
-import { Award, Download, ExternalLink, Mail, MapPin, Quote, Star, TrendingUp, Users, Zap } from "lucide-react";
+import { Award, Download, ExternalLink, Home, Laptop, Mail, MapPin, Monitor, Quote, Star, TrendingUp, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -192,13 +192,13 @@ export default function Page() {
                         </div>
                     </BlurFade>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-                        {/* Frontend Skills */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+                        {/* Frontend & SAAS */}
                         <BlurFade delay={BLUR_FADE_DELAY * 9}>
                             <div className="space-y-4">
-                                <h3 className="font-semibold text-lg text-center">Frontend</h3>
+                                <h3 className="font-semibold text-lg text-center">Frontend & SAAS</h3>
                                 <div className="flex flex-wrap gap-2 justify-center">
-                                    {["React.js", "Next.js", "TypeScript", "JavaScript"].map((skill) => (
+                                    {["React.js", "Next.js", "TypeScript", "SAAS Development"].map((skill) => (
                                         <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
                                             {skill}
                                         </Badge>
@@ -207,12 +207,12 @@ export default function Page() {
                             </div>
                         </BlurFade>
                         
-                        {/* Backend Skills */}
+                        {/* Payments & E-commerce */}
                         <BlurFade delay={BLUR_FADE_DELAY * 10}>
                             <div className="space-y-4">
-                                <h3 className="font-semibold text-lg text-center">Backend & Cloud</h3>
+                                <h3 className="font-semibold text-lg text-center">Payments & Cloud</h3>
                                 <div className="flex flex-wrap gap-2 justify-center">
-                                    {["Node.js", "Firebase", "GCP", "Docker"].map((skill) => (
+                                    {["Stripe", "PayPal", "Firebase", "GCP"].map((skill) => (
                                         <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
                                             {skill}
                                         </Badge>
@@ -221,12 +221,26 @@ export default function Page() {
                             </div>
                         </BlurFade>
                         
-                        {/* Tools & Others */}
+                        {/* Game Dev & Creative */}
                         <BlurFade delay={BLUR_FADE_DELAY * 11}>
                             <div className="space-y-4">
-                                <h3 className="font-semibold text-lg text-center">Tools & Leadership</h3>
+                                <h3 className="font-semibold text-lg text-center">Game Dev & Art</h3>
                                 <div className="flex flex-wrap gap-2 justify-center">
-                                    {["Strategic Planning", "Mentoring Teams", "Github", "Redux"].map((skill) => (
+                                    {["Unity", "C#", "Procreate", "UI/UX Design"].map((skill) => (
+                                        <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
+                                            {skill}
+                                        </Badge>
+                                    ))}
+                                </div>
+                            </div>
+                        </BlurFade>
+                        
+                        {/* Leadership & Remote */}
+                        <BlurFade delay={BLUR_FADE_DELAY * 12}>
+                            <div className="space-y-4">
+                                <h3 className="font-semibold text-lg text-center">Leadership & Remote</h3>
+                                <div className="flex flex-wrap gap-2 justify-center">
+                                    {["Team Leadership", "Remote Work", "Strategic Planning", "Mentoring"].map((skill) => (
                                         <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
                                             {skill}
                                         </Badge>
@@ -283,6 +297,63 @@ export default function Page() {
                             </BlurFade>
                         ))}
                     </div>
+                </div>
+            </section>
+            
+            {/* Remote Work Setup Section */}
+            <section id="remote-setup" className="bg-muted/30 -mx-6 px-6 py-16 rounded-2xl">
+                <div className="space-y-8">
+                    <BlurFade delay={BLUR_FADE_DELAY * 15}>
+                        <div className="text-center space-y-2">
+                            <Badge variant="outline" className="mb-4">
+                                <Home className="w-3 h-3 mr-1" />
+                                Remote Work Setup
+                            </Badge>
+                            <h2 className="text-3xl font-bold tracking-tight">Professional Home Office</h2>
+                            <p className="text-muted-foreground max-w-2xl mx-auto">
+                                {DATA.workSetup.description}
+                            </p>
+                            <Badge className="bg-green-600 hover:bg-green-700 mt-4">
+                                🌍 {DATA.workSetup.workStyle}
+                            </Badge>
+                        </div>
+                    </BlurFade>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {DATA.workSetup.equipment.map((category, index) => (
+                            <BlurFade key={category.category} delay={BLUR_FADE_DELAY * 16 + index * 0.1}>
+                                <Card className="group hover:shadow-xl transition-all duration-300 hover:scale-105 bg-background/80 backdrop-blur-sm">
+                                    <CardHeader className="text-center">
+                                        <div className="flex items-center justify-center mb-3">
+                                            {category.category === "Computing" && <Laptop className="w-8 h-8 text-blue-500" />}
+                                            {category.category === "Displays" && <Monitor className="w-8 h-8 text-purple-500" />}
+                                            {category.category === "Peripherals" && <Zap className="w-8 h-8 text-green-500" />}
+                                        </div>
+                                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                                            {category.category}
+                                        </CardTitle>
+                                    </CardHeader>
+                                    <CardContent className="space-y-4">
+                                        {category.items.map((item, itemIndex) => (
+                                            <div key={itemIndex} className="border-l-2 border-primary/20 pl-4 hover:border-primary/50 transition-colors">
+                                                <h4 className="font-semibold text-sm">{item.name}</h4>
+                                                <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
+                                            </div>
+                                        ))}
+                                    </CardContent>
+                                </Card>
+                            </BlurFade>
+                        ))}
+                    </div>
+                    
+                    <BlurFade delay={BLUR_FADE_DELAY * 17}>
+                        <div className="text-center mt-8">
+                            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/10 to-blue-500/10 px-6 py-3 rounded-full border">
+                                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                <span className="text-sm font-medium">Available for Remote Projects Worldwide</span>
+                            </div>
+                        </div>
+                    </BlurFade>
                 </div>
             </section>
             

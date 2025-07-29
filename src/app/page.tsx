@@ -10,7 +10,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
-import { Award, Download, ExternalLink, Home, Laptop, Mail, MapPin, Monitor, Quote, Star, TrendingUp, Users, Zap } from "lucide-react";
+import {
+    Award,
+    Download,
+    ExternalLink,
+    Home,
+    Laptop,
+    Mail,
+    MapPin,
+    Monitor,
+    Quote,
+    Star,
+    TrendingUp,
+    Users,
+    Zap,
+} from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -27,7 +41,7 @@ export default function Page() {
                     <div className="absolute bottom-20 left-20 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl animate-pulse delay-2000"></div>
                     <div className="absolute bottom-40 right-10 w-16 h-16 bg-pink-500/10 rounded-full blur-xl animate-pulse delay-500"></div>
                 </div>
-                
+
                 <div className="mx-auto w-full max-w-2xl space-y-8 relative">
                     <div className="gap-6 flex justify-between items-start">
                         <div className="flex-col flex flex-1 space-y-4">
@@ -64,7 +78,7 @@ export default function Page() {
                                 delay={BLUR_FADE_DELAY * 3}
                                 text={DATA.description}
                             />
-                            
+
                             {/* Social Links */}
                             <BlurFade delay={BLUR_FADE_DELAY * 4}>
                                 <div className="flex items-center gap-3 mt-6">
@@ -87,11 +101,14 @@ export default function Page() {
                                         ))}
                                 </div>
                             </BlurFade>
-                            
+
                             {/* CTA Buttons */}
                             <BlurFade delay={BLUR_FADE_DELAY * 5}>
                                 <div className="flex items-center gap-3 mt-8">
-                                    <Button asChild className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600">
+                                    <Button
+                                        asChild
+                                        className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
+                                    >
                                         <Link href={`mailto:${DATA.contact.email}`}>
                                             <Mail className="w-4 h-4 mr-2" />
                                             Get in Touch
@@ -110,15 +127,21 @@ export default function Page() {
                             <div className="relative">
                                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-lg"></div>
                                 <Avatar className="size-32 border-2 border-muted relative shadow-xl">
-                                    <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="object-cover" />
-                                    <AvatarFallback className="text-2xl font-bold">{DATA.initials}</AvatarFallback>
+                                    <AvatarImage
+                                        alt={DATA.name}
+                                        src={DATA.avatarUrl}
+                                        className="object-cover"
+                                    />
+                                    <AvatarFallback className="text-2xl font-bold">
+                                        {DATA.initials}
+                                    </AvatarFallback>
                                 </Avatar>
                             </div>
                         </BlurFade>
                     </div>
                 </div>
             </section>
-            
+
             {/* Animated Stats Section */}
             <section id="stats" className="py-8">
                 <BlurFade delay={BLUR_FADE_DELAY * 6}>
@@ -128,7 +151,9 @@ export default function Page() {
                                 <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
                                     {DATA.stats.yearsOfExperience}+
                                 </div>
-                                <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
+                                <div className="text-sm text-muted-foreground mt-1">
+                                    Years Experience
+                                </div>
                             </div>
                         </div>
                         <div className="text-center group">
@@ -136,7 +161,9 @@ export default function Page() {
                                 <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent">
                                     {DATA.stats.projectsCompleted}+
                                 </div>
-                                <div className="text-sm text-muted-foreground mt-1">Projects Completed</div>
+                                <div className="text-sm text-muted-foreground mt-1">
+                                    Projects Completed
+                                </div>
                             </div>
                         </div>
                         <div className="text-center group">
@@ -144,7 +171,9 @@ export default function Page() {
                                 <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-500 bg-clip-text text-transparent">
                                     {DATA.stats.clientsSatisfied}+
                                 </div>
-                                <div className="text-sm text-muted-foreground mt-1">Clients Satisfied</div>
+                                <div className="text-sm text-muted-foreground mt-1">
+                                    Clients Satisfied
+                                </div>
                             </div>
                         </div>
                         <div className="text-center group">
@@ -152,13 +181,15 @@ export default function Page() {
                                 <div className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-500 bg-clip-text text-transparent">
                                     {DATA.stats.teamMembersLed}+
                                 </div>
-                                <div className="text-sm text-muted-foreground mt-1">Team Members Led</div>
+                                <div className="text-sm text-muted-foreground mt-1">
+                                    Team Members Led
+                                </div>
                             </div>
                         </div>
                     </div>
                 </BlurFade>
             </section>
-            
+
             <section id="about" className="bg-muted/30 -mx-6 px-6 py-12 rounded-2xl">
                 <div className="space-y-6">
                     <BlurFade delay={BLUR_FADE_DELAY * 6}>
@@ -176,7 +207,7 @@ export default function Page() {
                     </BlurFade>
                 </div>
             </section>
-            
+
             {/* Skills Section */}
             <section id="skills">
                 <div className="space-y-6">
@@ -185,63 +216,96 @@ export default function Page() {
                             <Badge variant="outline" className="mb-4">
                                 Skills & Expertise
                             </Badge>
-                            <h2 className="text-3xl font-bold tracking-tight">Technical Proficiency</h2>
+                            <h2 className="text-3xl font-bold tracking-tight">
+                                Technical Proficiency
+                            </h2>
                             <p className="text-muted-foreground max-w-2xl mx-auto">
                                 Technologies and tools I work with to bring ideas to life
                             </p>
                         </div>
                     </BlurFade>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
                         {/* Frontend & SAAS */}
                         <BlurFade delay={BLUR_FADE_DELAY * 9}>
                             <div className="space-y-4">
-                                <h3 className="font-semibold text-lg text-center">Frontend & SAAS</h3>
+                                <h3 className="font-semibold text-lg text-center">
+                                    Frontend & SAAS
+                                </h3>
                                 <div className="flex flex-wrap gap-2 justify-center">
-                                    {["React.js", "Next.js", "TypeScript", "SAAS Development"].map((skill) => (
-                                        <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
-                                            {skill}
-                                        </Badge>
-                                    ))}
+                                    {["React.js", "Next.js", "TypeScript", "SAAS Development"].map(
+                                        (skill) => (
+                                            <Badge
+                                                key={skill}
+                                                variant="secondary"
+                                                className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                                            >
+                                                {skill}
+                                            </Badge>
+                                        )
+                                    )}
                                 </div>
                             </div>
                         </BlurFade>
-                        
+
                         {/* Payments & E-commerce */}
                         <BlurFade delay={BLUR_FADE_DELAY * 10}>
                             <div className="space-y-4">
-                                <h3 className="font-semibold text-lg text-center">Payments & Cloud</h3>
+                                <h3 className="font-semibold text-lg text-center">
+                                    Payments & Cloud
+                                </h3>
                                 <div className="flex flex-wrap gap-2 justify-center">
                                     {["Stripe", "PayPal", "Firebase", "GCP"].map((skill) => (
-                                        <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
+                                        <Badge
+                                            key={skill}
+                                            variant="secondary"
+                                            className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                                        >
                                             {skill}
                                         </Badge>
                                     ))}
                                 </div>
                             </div>
                         </BlurFade>
-                        
+
                         {/* Game Dev & Creative */}
                         <BlurFade delay={BLUR_FADE_DELAY * 11}>
                             <div className="space-y-4">
-                                <h3 className="font-semibold text-lg text-center">Game Dev & Art</h3>
+                                <h3 className="font-semibold text-lg text-center">
+                                    Game Dev & Art
+                                </h3>
                                 <div className="flex flex-wrap gap-2 justify-center">
                                     {["Unity", "C#", "Procreate", "UI/UX Design"].map((skill) => (
-                                        <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
+                                        <Badge
+                                            key={skill}
+                                            variant="secondary"
+                                            className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                                        >
                                             {skill}
                                         </Badge>
                                     ))}
                                 </div>
                             </div>
                         </BlurFade>
-                        
+
                         {/* Leadership & Remote */}
                         <BlurFade delay={BLUR_FADE_DELAY * 12}>
                             <div className="space-y-4">
-                                <h3 className="font-semibold text-lg text-center">Leadership & Remote</h3>
+                                <h3 className="font-semibold text-lg text-center">
+                                    Leadership & Remote
+                                </h3>
                                 <div className="flex flex-wrap gap-2 justify-center">
-                                    {["Team Leadership", "Remote Work", "Strategic Planning", "Mentoring"].map((skill) => (
-                                        <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default">
+                                    {[
+                                        "Team Leadership",
+                                        "Remote Work",
+                                        "Strategic Planning",
+                                        "Mentoring",
+                                    ].map((skill) => (
+                                        <Badge
+                                            key={skill}
+                                            variant="secondary"
+                                            className="hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                                        >
                                             {skill}
                                         </Badge>
                                     ))}
@@ -251,7 +315,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            
+
             {/* Services Section */}
             <section id="services" className="py-16">
                 <div className="space-y-8">
@@ -266,13 +330,16 @@ export default function Page() {
                             </p>
                         </div>
                     </BlurFade>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {DATA.services.map((service, index) => (
-                            <BlurFade key={service.title} delay={BLUR_FADE_DELAY * 13 + index * 0.1}>
+                            <BlurFade
+                                key={service.title}
+                                delay={BLUR_FADE_DELAY * 13 + index * 0.1}
+                            >
                                 <Card className="group hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border-2 hover:border-primary/20">
                                     <CardHeader>
-                                        <div className="flex items-center gap-3">
+                                        <div className="flex items-center gap-3 mx-4 mt-4">
                                             <div className="text-3xl">{service.icon}</div>
                                             <div>
                                                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
@@ -285,9 +352,13 @@ export default function Page() {
                                         </div>
                                     </CardHeader>
                                     <CardContent>
-                                        <div className="flex flex-wrap gap-2">
+                                        <div className="flex flex-wrap gap-2 mx-4 mb-4">
                                             {service.technologies.map((tech) => (
-                                                <Badge key={tech} variant="secondary" className="text-xs">
+                                                <Badge
+                                                    key={tech}
+                                                    variant="secondary"
+                                                    className="text-xs"
+                                                >
                                                     {tech}
                                                 </Badge>
                                             ))}
@@ -299,7 +370,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            
+
             {/* Remote Work Setup Section */}
             <section id="remote-setup" className="bg-muted/30 -mx-6 px-6 py-16 rounded-2xl">
                 <div className="space-y-8">
@@ -309,7 +380,9 @@ export default function Page() {
                                 <Home className="w-3 h-3 mr-1" />
                                 Remote Work Setup
                             </Badge>
-                            <h2 className="text-3xl font-bold tracking-tight">Professional Home Office</h2>
+                            <h2 className="text-3xl font-bold tracking-tight">
+                                Professional Home Office
+                            </h2>
                             <p className="text-muted-foreground max-w-2xl mx-auto">
                                 {DATA.workSetup.description}
                             </p>
@@ -318,16 +391,25 @@ export default function Page() {
                             </Badge>
                         </div>
                     </BlurFade>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {DATA.workSetup.equipment.map((category, index) => (
-                            <BlurFade key={category.category} delay={BLUR_FADE_DELAY * 16 + index * 0.1}>
+                            <BlurFade
+                                key={category.category}
+                                delay={BLUR_FADE_DELAY * 16 + index * 0.1}
+                            >
                                 <Card className="group hover:shadow-xl transition-all duration-300 hover:scale-105 bg-background/80 backdrop-blur-sm">
                                     <CardHeader className="text-center">
                                         <div className="flex items-center justify-center mb-3">
-                                            {category.category === "Computing" && <Laptop className="w-8 h-8 text-blue-500" />}
-                                            {category.category === "Displays" && <Monitor className="w-8 h-8 text-purple-500" />}
-                                            {category.category === "Peripherals" && <Zap className="w-8 h-8 text-green-500" />}
+                                            {category.category === "Computing" && (
+                                                <Laptop className="w-8 h-8 text-blue-500" />
+                                            )}
+                                            {category.category === "Displays" && (
+                                                <Monitor className="w-8 h-8 text-purple-500" />
+                                            )}
+                                            {category.category === "Peripherals" && (
+                                                <Zap className="w-8 h-8 text-green-500" />
+                                            )}
                                         </div>
                                         <CardTitle className="text-xl group-hover:text-primary transition-colors">
                                             {category.category}
@@ -335,9 +417,16 @@ export default function Page() {
                                     </CardHeader>
                                     <CardContent className="space-y-4">
                                         {category.items.map((item, itemIndex) => (
-                                            <div key={itemIndex} className="border-l-2 border-primary/20 pl-4 hover:border-primary/50 transition-colors">
-                                                <h4 className="font-semibold text-sm">{item.name}</h4>
-                                                <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
+                                            <div
+                                                key={itemIndex}
+                                                className="border-l-2 border-primary/20 pl-4 hover:border-primary/50 transition-colors"
+                                            >
+                                                <h4 className="font-semibold text-sm">
+                                                    {item.name}
+                                                </h4>
+                                                <p className="text-xs text-muted-foreground mt-1">
+                                                    {item.description}
+                                                </p>
                                             </div>
                                         ))}
                                     </CardContent>
@@ -345,18 +434,20 @@ export default function Page() {
                             </BlurFade>
                         ))}
                     </div>
-                    
+
                     <BlurFade delay={BLUR_FADE_DELAY * 17}>
                         <div className="text-center mt-8">
                             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500/10 to-blue-500/10 px-6 py-3 rounded-full border">
                                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                                <span className="text-sm font-medium">Available for Remote Projects Worldwide</span>
+                                <span className="text-sm font-medium">
+                                    Available for Remote Projects Worldwide
+                                </span>
                             </div>
                         </div>
                     </BlurFade>
                 </div>
             </section>
-            
+
             <section id="work">
                 <div className="space-y-8">
                     <BlurFade delay={BLUR_FADE_DELAY * 12}>
@@ -370,7 +461,7 @@ export default function Page() {
                             </p>
                         </div>
                     </BlurFade>
-                    
+
                     <div className="space-y-6">
                         {DATA.work.map((work, id) => (
                             <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 13 + id * 0.05}>
@@ -387,9 +478,7 @@ export default function Page() {
                                         description={work.description}
                                     />
                                 </div>
-                                {id < DATA.work.length - 1 && (
-                                    <Separator className="my-6" />
-                                )}
+                                {id < DATA.work.length - 1 && <Separator className="my-6" />}
                             </BlurFade>
                         ))}
                     </div>
@@ -402,16 +491,21 @@ export default function Page() {
                             <Badge variant="outline" className="mb-4">
                                 Education
                             </Badge>
-                            <h2 className="text-3xl font-bold tracking-tight">Academic Background</h2>
+                            <h2 className="text-3xl font-bold tracking-tight">
+                                Academic Background
+                            </h2>
                             <p className="text-muted-foreground max-w-2xl mx-auto">
                                 Foundation of my technical knowledge and expertise
                             </p>
                         </div>
                     </BlurFade>
-                    
+
                     <div className="space-y-6">
                         {DATA.education.map((education, id) => (
-                            <BlurFade key={education.school} delay={BLUR_FADE_DELAY * 17 + id * 0.05}>
+                            <BlurFade
+                                key={education.school}
+                                delay={BLUR_FADE_DELAY * 17 + id * 0.05}
+                            >
                                 <div className="group hover:bg-background/50 transition-colors duration-200 p-4 rounded-xl -mx-4">
                                     <ResumeCard
                                         key={education.school}
@@ -451,11 +545,12 @@ export default function Page() {
                             </Badge>
                             <h2 className="text-3xl font-bold tracking-tight">Featured Work</h2>
                             <p className="text-muted-foreground max-w-2xl mx-auto">
-                                A showcase of projects that demonstrate my technical expertise and problem-solving abilities
+                                A showcase of projects that demonstrate my technical expertise and
+                                problem-solving abilities
                             </p>
                         </div>
                     </BlurFade>
-                    
+
                     <div className="grid grid-cols-1 gap-6">
                         {DATA.projects.map((project, id) => (
                             <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 19 + id * 0.05}>
@@ -479,15 +574,13 @@ export default function Page() {
                                         </div>
                                     )}
                                 </div>
-                                {id < DATA.projects.length - 1 && (
-                                    <Separator className="my-8" />
-                                )}
+                                {id < DATA.projects.length - 1 && <Separator className="my-8" />}
                             </BlurFade>
                         ))}
                     </div>
                 </div>
             </section>
-            
+
             {/* Achievements Section */}
             <section id="achievements" className="py-16">
                 <div className="space-y-8">
@@ -502,17 +595,23 @@ export default function Page() {
                             </p>
                         </div>
                     </BlurFade>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {DATA.achievements.map((achievement, index) => (
-                            <BlurFade key={achievement.title} delay={BLUR_FADE_DELAY * 21 + index * 0.1}>
+                            <BlurFade
+                                key={achievement.title}
+                                delay={BLUR_FADE_DELAY * 21 + index * 0.1}
+                            >
                                 <Card className="group hover:shadow-xl transition-all duration-300 hover:scale-105 bg-gradient-to-br from-background to-muted/30">
                                     <CardHeader className="text-center">
                                         <div className="text-4xl mb-3">{achievement.icon}</div>
                                         <CardTitle className="text-lg group-hover:text-primary transition-colors">
                                             {achievement.title}
                                         </CardTitle>
-                                        <Badge variant="secondary" className="text-xs w-fit mx-auto">
+                                        <Badge
+                                            variant="secondary"
+                                            className="text-xs w-fit mx-auto"
+                                        >
                                             {achievement.year}
                                         </Badge>
                                     </CardHeader>
@@ -527,7 +626,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            
+
             <section id="hackathons" className="bg-muted/30 -mx-6 px-6 py-12 rounded-2xl">
                 <div className="space-y-8">
                     <BlurFade delay={BLUR_FADE_DELAY * 20}>
@@ -535,10 +634,13 @@ export default function Page() {
                             <Badge variant="outline" className="mb-4">
                                 Hackathons
                             </Badge>
-                            <h2 className="text-3xl font-bold tracking-tight">Building Innovation</h2>
+                            <h2 className="text-3xl font-bold tracking-tight">
+                                Building Innovation
+                            </h2>
                             <p className="text-muted-foreground max-w-2xl mx-auto">
-                                During my time in university, I attended {DATA.hackathons.length}+ hackathons. 
-                                People from around the country would come together and build incredible things in 2-3 days.
+                                During my time in university, I attended {DATA.hackathons.length}+
+                                hackathons. People from around the country would come together and
+                                build incredible things in 2-3 days.
                             </p>
                         </div>
                     </BlurFade>
@@ -563,7 +665,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            
+
             {/* Testimonials Section */}
             <section id="testimonials" className="py-16">
                 <div className="space-y-8">
@@ -578,22 +680,35 @@ export default function Page() {
                             </p>
                         </div>
                     </BlurFade>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {DATA.testimonials.map((testimonial, index) => (
-                            <BlurFade key={testimonial.name} delay={BLUR_FADE_DELAY * 26 + index * 0.2}>
+                            <BlurFade
+                                key={testimonial.name}
+                                delay={BLUR_FADE_DELAY * 26 + index * 0.2}
+                            >
                                 <Card className="group hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gradient-to-br from-background to-muted/20 border-2 hover:border-primary/20">
                                     <CardHeader>
                                         <div className="flex items-center gap-4">
                                             <Avatar className="w-12 h-12 border-2 border-muted">
-                                                <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                                                <AvatarImage
+                                                    src={testimonial.avatar}
+                                                    alt={testimonial.name}
+                                                />
                                                 <AvatarFallback className="bg-gradient-to-br from-purple-500 to-blue-500 text-white font-bold">
-                                                    {testimonial.name.split(' ').map(n => n[0]).join('')}
+                                                    {testimonial.name
+                                                        .split(" ")
+                                                        .map((n) => n[0])
+                                                        .join("")}
                                                 </AvatarFallback>
                                             </Avatar>
                                             <div>
-                                                <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                                                <CardDescription className="text-sm">{testimonial.role}</CardDescription>
+                                                <CardTitle className="text-lg">
+                                                    {testimonial.name}
+                                                </CardTitle>
+                                                <CardDescription className="text-sm">
+                                                    {testimonial.role}
+                                                </CardDescription>
                                             </div>
                                         </div>
                                     </CardHeader>
@@ -606,7 +721,10 @@ export default function Page() {
                                         </div>
                                         <div className="flex items-center gap-1 mt-4">
                                             {[...Array(5)].map((_, i) => (
-                                                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                                                <Star
+                                                    key={i}
+                                                    className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                                                />
                                             ))}
                                         </div>
                                     </CardContent>
@@ -616,7 +734,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            
+
             <section id="contact">
                 <div className="space-y-8 text-center py-12">
                     <BlurFade delay={BLUR_FADE_DELAY * 22}>
@@ -641,7 +759,7 @@ export default function Page() {
                             </p>
                         </div>
                     </BlurFade>
-                    
+
                     <BlurFade delay={BLUR_FADE_DELAY * 23}>
                         <div className="flex justify-center gap-6 mt-8">
                             {Object.entries(DATA.contact.social)
@@ -663,19 +781,21 @@ export default function Page() {
                                 ))}
                         </div>
                     </BlurFade>
-                    
+
                     <BlurFade delay={BLUR_FADE_DELAY * 24}>
                         <div className="flex justify-center gap-4 mt-8">
-                            <Button asChild size="lg" className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600">
+                            <Button
+                                asChild
+                                size="lg"
+                                className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
+                            >
                                 <Link href={`mailto:${DATA.contact.email}`}>
                                     <Mail className="w-5 h-5 mr-2" />
                                     Send Email
                                 </Link>
                             </Button>
                             <Button variant="outline" size="lg" asChild>
-                                <Link href={`tel:${DATA.contact.tel}`}>
-                                    Call Me
-                                </Link>
+                                <Link href={`tel:${DATA.contact.tel}`}>Call Me</Link>
                             </Button>
                         </div>
                     </BlurFade>

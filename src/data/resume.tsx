@@ -64,31 +64,53 @@ export const DATA = {
     // Remote Work Setup
     workSetup: {
         workStyle: "100% Remote",
-        description: "Professional home office with cutting-edge equipment for maximum productivity",
+        description:
+            "Professional home office with cutting-edge equipment for maximum productivity",
         equipment: [
             {
                 category: "Computing",
                 items: [
-                    { name: "MacBook Pro M4 Max", description: "Latest Apple Silicon for peak performance" },
-                    { name: "32GB Unified Memory", description: "Seamless multitasking and development" }
-                ]
+                    {
+                        name: "MacBook Pro M4 Max",
+                        description: "Latest Apple Silicon for peak performance",
+                    },
+                    {
+                        name: "32GB Unified Memory",
+                        description: "Seamless multitasking and development",
+                    },
+                ],
             },
             {
                 category: "Displays",
                 items: [
-                    { name: "2x Apple Studio Display 32\"", description: "Dual 5K Retina displays for enhanced productivity" },
-                    { name: "iPad Pro with Apple Pencil", description: "Digital art creation and design work" }
-                ]
+                    {
+                        name: '2x Apple Studio Display 32"',
+                        description: "Dual 5K Retina displays for enhanced productivity",
+                    },
+                    {
+                        name: "iPad Pro with Apple Pencil",
+                        description: "Digital art creation and design work",
+                    },
+                ],
             },
             {
                 category: "Peripherals",
                 items: [
-                    { name: "Keychron K2 Mechanical Keyboard", description: "Premium typing experience" },
-                    { name: "Professional Lighting Setup", description: "Optimal lighting for video calls" },
-                    { name: "Ergonomic Workspace", description: "Comfortable and productive environment" }
-                ]
-            }
-        ]
+                    {
+                        name: "Keychron K2 Mechanical Keyboard",
+                        description: "Premium typing experience",
+                    },
+                    {
+                        name: "Professional Lighting Setup",
+                        description: "Optimal lighting for video calls",
+                    },
+                    {
+                        name: "Ergonomic Workspace",
+                        description: "Comfortable and productive environment",
+                    },
+                ],
+            },
+        ],
     },
 
     // Services offered
@@ -103,7 +125,12 @@ export const DATA = {
             title: "SAAS Development",
             description: "Complete SAAS platform development with subscription management",
             icon: "🚀",
-            technologies: ["SAAS Architecture", "Multi-tenancy", "Subscription Models", "Analytics"],
+            technologies: [
+                "SAAS Architecture",
+                "Multi-tenancy",
+                "Subscription Models",
+                "Analytics",
+            ],
         },
         {
             title: "Payment Integration",
@@ -121,7 +148,12 @@ export const DATA = {
             title: "Digital Art & Design",
             description: "Creative digital artwork and UI/UX design using professional tools",
             icon: "🎨",
-            technologies: ["Procreate", "Digital Illustration", "UI/UX Design", "Creative Direction"],
+            technologies: [
+                "Procreate",
+                "Digital Illustration",
+                "UI/UX Design",
+                "Creative Direction",
+            ],
         },
         {
             title: "Cloud Architecture",
@@ -274,7 +306,7 @@ export const DATA = {
                 },
             ],
             image: "/portfolio/fps.png",
-            video: "https://res.cloudinary.com/prabhjottechs/video/upload/v1741760112/fps-lounge-demo.mp4",
+            video: "",
         },
         {
             title: "Phuntoken Cryptocurrency",

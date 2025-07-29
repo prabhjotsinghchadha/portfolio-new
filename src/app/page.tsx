@@ -115,7 +115,10 @@ export default function Page() {
                                         </Link>
                                     </Button>
                                     <Button variant="outline" asChild>
-                                        <Link href="#" download>
+                                        <Link
+                                            href="https://drive.google.com/file/d/1aEKw3IQa4Ju_zckZ5KMQrEFcMsP9b0bX/view?usp=sharing"
+                                            download
+                                        >
                                             <Download className="w-4 h-4 mr-2" />
                                             Download CV
                                         </Link>

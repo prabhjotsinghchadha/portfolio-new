@@ -689,7 +689,7 @@ export default function Page() {
                             >
                                 <Card className="group hover:shadow-xl transition-all duration-300 hover:scale-[1.02] bg-gradient-to-br from-background to-muted/20 border-2 hover:border-primary/20">
                                     <CardHeader>
-                                        <div className="flex items-center gap-4">
+                                        <div className="flex items-center gap-4 mx-4 mt-4">
                                             <Avatar className="w-12 h-12 border-2 border-muted">
                                                 <AvatarImage
                                                     src={testimonial.avatar}
@@ -714,12 +714,12 @@ export default function Page() {
                                     </CardHeader>
                                     <CardContent>
                                         <div className="relative">
-                                            <Quote className="absolute -top-2 -left-2 w-6 h-6 text-muted-foreground/30" />
+                                            {/* <Quote className="absolute -top-2 -left-2 w-6 h-6 text-muted-foreground/30" /> */}
                                             <p className="text-sm leading-relaxed pl-4 italic group-hover:text-foreground transition-colors">
                                                 &ldquo;{testimonial.content}&rdquo;
                                             </p>
                                         </div>
-                                        <div className="flex items-center gap-1 mt-4">
+                                        <div className="flex items-center gap-1 my-4 ml-4">
                                             {[...Array(5)].map((_, i) => (
                                                 <Star
                                                     key={i}

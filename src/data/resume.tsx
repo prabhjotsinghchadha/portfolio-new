@@ -225,6 +225,12 @@ export const DATA = {
                 icon: Icons.x,
                 navbar: true,
             },
+            Discord: {
+                name: "Discord",
+                url: "https://discord.gg/7KeTc29CEd",
+                icon: Icons.discord,
+                navbar: true,
+            },
             email: {
                 name: "Send Email",
                 url: "mailto:prabhjottechs@gmail.com",

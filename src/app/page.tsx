@@ -12,6 +12,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { DATA } from "@/data/resume";
 import {
     Award,
+    Calendar,
     Download,
     ExternalLink,
     Home,
@@ -104,7 +105,7 @@ export default function Page() {
 
                             {/* CTA Buttons */}
                             <BlurFade delay={BLUR_FADE_DELAY * 5}>
-                                <div className="flex items-center gap-3 mt-8">
+                                <div className="flex items-center gap-3 mt-8 flex-wrap">
                                     <Button
                                         asChild
                                         className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
@@ -112,6 +113,19 @@ export default function Page() {
                                         <Link href={`mailto:${DATA.contact.email}`}>
                                             <Mail className="w-4 h-4 mr-2" />
                                             Get in Touch
+                                        </Link>
+                                    </Button>
+                                    <Button
+                                        asChild
+                                        className="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white"
+                                    >
+                                        <Link
+                                            href="https://calendar.app.google/Sz3q9njmFQ3XMQ4y8"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <Calendar className="w-4 h-4 mr-2" />
+                                            Book a Meeting
                                         </Link>
                                     </Button>
                                     <Button variant="outline" asChild>
@@ -786,7 +800,7 @@ export default function Page() {
                     </BlurFade>
 
                     <BlurFade delay={BLUR_FADE_DELAY * 24}>
-                        <div className="flex justify-center gap-4 mt-8">
+                        <div className="flex justify-center gap-4 mt-8 flex-wrap">
                             <Button
                                 asChild
                                 size="lg"
@@ -799,6 +813,20 @@ export default function Page() {
                             </Button>
                             <Button variant="outline" size="lg" asChild>
                                 <Link href={`tel:${DATA.contact.tel}`}>Call Me</Link>
+                            </Button>
+                            <Button
+                                asChild
+                                size="lg"
+                                className="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white"
+                            >
+                                <Link
+                                    href="https://calendar.app.google/Sz3q9njmFQ3XMQ4y8"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Calendar className="w-5 h-5 mr-2" />
+                                    Book a Meeting
+                                </Link>
                             </Button>
                         </div>
                     </BlurFade>
